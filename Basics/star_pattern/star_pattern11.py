@@ -49,7 +49,7 @@ for i in range (1,a):
 
     # print decreasing space - left
     for j in range(a-1-i):
-      print(" ",end='')
+      print("$",end='')
 
     # print decreasing space - right
     for j in range(a-i):
