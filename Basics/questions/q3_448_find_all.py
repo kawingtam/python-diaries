@@ -10,3 +10,15 @@ a = input("Enter numbers separated by commas: ")
 
 # Convert input to a list of integers
 a = list(map(int, a.split(",")))
+
+seen = []
+missing_num = []
+
+for i in a:
+    if i in a:
+        seen.append(i)
+    else:
+        missing_num.append(i)
+
+missing_num.sort()
+print(missing_num)
