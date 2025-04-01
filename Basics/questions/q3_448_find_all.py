@@ -7,14 +7,14 @@ Output: [5,6]
 """
 
 a = input("Enter numbers separated by commas: ")
-
-# Convert input to a list of integers
 a = list(map(int, a.split(",")))
 
 seen = []
 missing_num = []
 
-for i in a:
+# Check for missing numbers in the range 1 to n
+for i in range(1, len(a) + 1):
+
     if i in a:
         seen.append(i)
     else:
