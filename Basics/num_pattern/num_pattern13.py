@@ -39,6 +39,6 @@ for i in range(a):
     print(col)
     print() 
 
-    if i % 3 == 2:  
+"""    if i % 3 == 2:  
         # Cycle through 0 → 1 → 2 → 3 → 0
-        current_direction = (current_direction + 1) % 4  
+        current_direction = (current_direction + 1) % 4  """
