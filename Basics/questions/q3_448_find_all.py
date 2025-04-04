@@ -9,15 +9,11 @@ Output: [5,6]
 a = input("Enter numbers separated by commas: ")
 a = list(map(int, a.split(",")))
 
-seen = []
 missing_num = []
 
 # Check for missing numbers in the range 1 to n
 for i in range(1, len(a) + 1):
-
-    if i in a:
-        seen.append(i)
-    else:
+    if i not in a:
         missing_num.append(i)
 
 missing_num.sort()
