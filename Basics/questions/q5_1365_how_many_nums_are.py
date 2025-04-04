@@ -14,11 +14,25 @@ For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
 nums = input("Enter numbers separated by commas: ")
 nums = list(map(int, nums.split(",")))
-smaller=[]
+
+
+temp = sorted(nums)
+d = {}
+
+for i, val in enumerate (temp):
+    if val not in d:
+        d[val]=i
+ret = []
+
+for val in nums:
+    ret.append(d[val])
+print(ret)
+
+"""smaller=[]
 for i in range(len(nums)):
     count = 0
     for j in range(len(nums)):
         if nums[i] > nums[j]:
             count +=1
     smaller.append(count)
-print(smaller)
+print(smaller)"""
