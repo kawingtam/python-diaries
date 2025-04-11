@@ -14,4 +14,13 @@ Input: grid = [
 ]
 Output: 1
 """
+matrix=[]
+while True:
+    nums = input("Enter numbers separated by commas(or enter done): ")
+    if nums.lower() == 'done':
+        break
+    nums = list(map(int, nums.split(",")))
+    matrix.append(nums)
+print('\n'.join(str(row) for row in matrix))
+
 
