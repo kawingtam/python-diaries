@@ -63,6 +63,3 @@ for i in range (1,a):
 print(" "*(a+1),end='')
 print("*")
 
-
-
->>>>>>> 47dd0814968e559f102c8c64e36f6d5dd0859b8d
