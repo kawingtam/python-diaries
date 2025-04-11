@@ -16,26 +16,46 @@ a = int(input("Enter a number: "))
 a_square = a**2
 
 result=[]
-#setting row and column
-row = 0
-column = 0
+result = [[0] * a for num in range(a)]
 
-#setting top, bottom, left, right
-top, bottom = 0, a-1
-left, right = 0, a-1
 
-for i in range (a_square+1):
-    while top <= bottom and left <= right:
-        #going right
-        for i in range(left,right+1):
-            result.append(i)
-        top +=1
+row = a
+column = a
 
-        #going down
-        for i in range(top,bottom+1):
-            result.append(i)
-        bottom+=1
+top = 0
+bottom = row - 1
+left = 0
+right = column - 1
 
+count = 1
+
+while top <= bottom and left <= right:
+    # go right
+    for i in range (left, right+1):
+        result[top][i] = count
+        count += 1
+    top +=1
+    
+    # go down
+    for j in range (top, bottom+1):
+        result[j][right]=count
+        count+=1
+    right -=1
+
+    # go left
+    if top <= bottom:
+        for k in range(right,left-1,-1):
+            result[bottom][k]=count
+            count+=1
+        bottom -=1
+
+    # up
+    if left <= right:
+        for l in range (bottom,top-1,-1):
+            result[l][left]=count
+            count +=1
+        left += 1
+    
 print(result)
 
 
