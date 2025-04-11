@@ -1,6 +1,6 @@
 """April 11, 2025
 
-54. Spiral Matrix
+200. Number of Islands
 
 Given an m x n 2D binary grid
 '1's (land) and '0's (water)
@@ -23,4 +23,14 @@ while True:
     matrix.append(nums)
 print('\n'.join(str(row) for row in matrix))
 
+row = a
+column = a
+
+top = 0
+bottom = row - 1
+left = 0
+right = column - 1
+
+island = 0 
+visited = set()
 
