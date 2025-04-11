@@ -8,7 +8,6 @@ Implement DFS for this graph.
 Start DFS from node 'A'.
 Print the order of traversal."""
 
-visited=set()
 
 graph = {
     'A': ['B', 'C'],
@@ -17,11 +16,6 @@ graph = {
     'D': ['B'],
     'E': ['C']
 }
-for node in graph:
-    if node not in visited:
-        visited.add(node)
-        for neighbor in graph[node]:
-            continue
 
-print(visited)
-        
+visited = set()
+
