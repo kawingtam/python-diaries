@@ -19,7 +19,6 @@ print(matrix)
 
 
 
-
 #get to know the mxn
 m = len(matrix[0]) #column
 n = len(matrix) #row
