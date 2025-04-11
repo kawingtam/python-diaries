@@ -18,7 +18,6 @@ while True:
 print(matrix)
 
 
-
 #get to know the mxn
 m = len(matrix[0]) #column
 n = len(matrix) #row
@@ -57,6 +56,5 @@ while top <= bottom and left <= right:
         for row in range (bottom,top-1,-1):
             result.append(matrix[row][left])
         left+=1
-
 
 print(result)
