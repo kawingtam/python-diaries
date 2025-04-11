@@ -16,3 +16,9 @@ while True:
     nums = list(map(int, nums.split(",")))
     matrix.append(nums)
 print(matrix)
+
+#get to know the mxn
+m = len(matrix[0])
+n = len(matrix)
+print(m)
+print(n)
