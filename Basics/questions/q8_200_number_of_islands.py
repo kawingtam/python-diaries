@@ -23,13 +23,11 @@ while True:
     matrix.append(nums)
 print('\n'.join(str(row) for row in matrix))
 
-row = a
-column = a
-
 top = 0
-bottom = row - 1
+bottom = len(matrix) - 1
 left = 0
-right = column - 1
+right = len(matrix[0]) - 1
+print(top,bottom,left,right)
 
 island = 0 
 visited = set()
