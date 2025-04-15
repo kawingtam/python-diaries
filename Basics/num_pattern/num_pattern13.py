@@ -16,17 +16,36 @@ a = int(input("Enter a number: "))
 a_square = a**2
 
 result=[]
+<<<<<<< HEAD
+=======
 result = [[0] * a for num in range(a)]
+>>>>>>> e5a847b000f78f15598cc0723da5d070fcb8e2f2
 
+<<<<<<< HEAD
+row, column = a,a
+=======
+>>>>>>> e5a847b000f78f15598cc0723da5d070fcb8e2f2
 
-row = a
-column = a
-
+<<<<<<< HEAD
 top = 0
 bottom = row - 1
 left = 0
 right = column - 1
+=======
+row = a
+column = a
+>>>>>>> e5a847b000f78f15598cc0723da5d070fcb8e2f2
 
+<<<<<<< HEAD
+=======
+top = 0
+bottom = row - 1
+left = 0
+right = column - 1
+>>>>>>> e5a847b000f78f15598cc0723da5d070fcb8e2f2
+
+<<<<<<< HEAD
+=======
 count = 1
 
 while top <= bottom and left <= right:
@@ -59,6 +78,7 @@ while top <= bottom and left <= right:
 print(result)
 
 
+>>>>>>> e5a847b000f78f15598cc0723da5d070fcb8e2f2
 """
 # goes in spiral
 while top <= bottom and left <= right:
