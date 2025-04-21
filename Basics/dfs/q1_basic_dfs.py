@@ -1,4 +1,7 @@
 """April 11, 2025
+
+Depth-First Search
+
 Given a graph (as an adjacency list)
 implement DFS to traverse the graph starting from a specified node
 Print all the nodes in the order they are visited
@@ -19,3 +22,17 @@ graph = {
 
 visited = set()
 
+def dfs_iterative (graph,start_node):
+    stack = [start_node]
+    while stack:
+        node = stack.pop()
+
+        if node not in visited:
+            visited.add(node)
+            print(node, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                stack.append(neighbor)
+
+dfs_iterative(graph,'A')
