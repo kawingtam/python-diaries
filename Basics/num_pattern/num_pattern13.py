@@ -15,7 +15,6 @@ prints:
 a = int(input("Enter a number: "))
 a_square = a**2
 
-result=[]
 
 row, column = a,a
 
@@ -24,30 +23,44 @@ bottom = row - 1
 left = 0
 right = column - 1
 
+matrix=[]
+for i in range(row):
+    matrix.append([])
 
-"""
+for i in range(0,row):
+    for j in range(0,right+1):
+        matrix[j].append(0)
+
+print(matrix)
+
+count = 1
+
 # goes in spiral
 while top <= bottom and left <= right:
     #going right
     for column in range(left,right+1):
-        result.append(matrix[top][column])
+        matrix[top][column]=count
+        count+=1
     top +=1
 
     #going down
     for row in range (top,bottom+1):
-        result.append(matrix[row][right])
+        matrix[row][right]=count
+        count+=1
     right -=1
 
     #going left
     if top <= bottom:
         for column in range(right,left-1,-1):
-            result.append(matrix[bottom][column])
+            matrix[bottom][column]=count
+            count+=1
         bottom -=1
 
     #going up
     if left <= right:
         for row in range (bottom,top-1,-1):
-            result.append(matrix[row][left])
+            matrix[row][left]=count
+            count+=1
         left+=1
-"""
 
+print(matrix)
