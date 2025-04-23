@@ -18,7 +18,7 @@ while user_win < 5 and computer_win < 5:
 
 
     user = input("Choose between rock, paper, scissors: ")
-    print(computer)
+
 
     if user == computer:
         print("Draw")
@@ -49,7 +49,12 @@ while user_win < 5 and computer_win < 5:
         print("User Points: ",user_win)
         print("Computer Points: ",computer_win)
 
-    if user_win == 5 or computer_win == 5:
+    if user_win == 5:
+        print("User Win!")
+        break
+        
+    if computer_win == 5:
+        print("Computer Win!")
         break
         
     ask = input("Play or exit: ")
