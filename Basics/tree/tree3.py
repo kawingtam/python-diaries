@@ -1,46 +1,53 @@
 """3. Count Total Nodes in a Tree
-✅ Task: Write a function that counts how many nodes are in a binary tree.
+Task: Write a function that counts how many nodes are in a binary tree.
+Given the tree 
 
+        A
+       / \
+      B   C
+     / \
+    D   E
 Start with:
-
-python
-Copy
-Edit
 def count_nodes(root):
     # your code here
-Try doing this without recursion first (using a queue or stack), then try it with recursion when you're ready.
+Try doing this without recursion first (using a queue or stack), 
+then try it with recursion when you're ready.
+"""
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+# Tree
+node_a = TreeNode("A")
+node_b = TreeNode("B")
+node_c = TreeNode("C")
+node_d = TreeNode("D")
+node_e = TreeNode("E")
 
-4. Find the Height of a Tree
-✅ Task: Write a function to find the height (maximum depth) of the tree.
+node_a.left = node_b
+node_a.right = node_c
 
-Example:
+node_b.left = node_d
+node_b.right = node_e
 
-A tree with just root → height = 1
+queue = [node_a]
+current = []
+count = 0
 
-A → B → D → height = 3
+while queue:
+    # take one node out of the front of the list
+    current = queue.pop(0)
 
-5. Check if a Node Exists
-✅ Task: Given a value, write a function that checks if it exists in the tree.
+    count +=1 # count the current node
+    
+    # if it has a left child
+    if current.left:
+        queue.append(current.left)
+        
 
-Example:
+    # if it has a right child
+    if current.right:
+        queue.append(current.right)
 
-python
-Copy
-Edit
-def node_exists(root, target_value):
-    # return True if value exists in tree
-6. Print Leaf Nodes Only
-✅ Task: Print only the nodes that don’t have children (leaf nodes).
-
-From the earlier tree:
-
-Leaf nodes: D, E, and C
-
-7. Print All Values at a Specific Level
-✅ Task: Write a function that prints all values at a given level k (e.g. level 2).
-
-Level 1: A
-
-Level 2: B, C
-
-Level 3: D, E"""
+print(count)

@@ -16,11 +16,13 @@ class TreeNode:
      / \
     D   E
 """
-def __init__(self, value):
-    self.value = value
-    self.left = None
-    self.right = None
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
+# calling the method
 node_a = TreeNode("A")
 node_b = TreeNode("B")
 node_c = TreeNode("C")
