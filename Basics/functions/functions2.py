@@ -19,9 +19,13 @@ print(ord('Z')) # Output: 90
 print(ord('z')) # Output: 122
 print(chr(65))  # Output: 'A' """
 
-str = "HELLO"
+"""str = "HELLO"
+skip_key = 1"""
+
+str = str(input("Enter a word: "))
+skip_key = int(input("Enter how many keys to skip: "))
 result = ""
 for char in str:
-    ord_method = ord(char) -1
+    ord_method = ord(char) - skip_key
     result += chr(ord_method)
 print(result)
