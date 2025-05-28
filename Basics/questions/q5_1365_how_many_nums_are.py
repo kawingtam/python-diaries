@@ -14,19 +14,22 @@ For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
 nums = input("Enter numbers separated by commas: ")
 nums = list(map(int, nums.split(",")))
-
+print(nums)
 
 temp = sorted(nums)
-d = {}
+dictionary = {}
 
-for i, val in enumerate (temp):
-    if val not in d:
-        d[val]=i
-ret = []
 
-for val in nums:
-    ret.append(d[val])
-print(ret)
+for index, value in enumerate (temp):
+    if value not in dictionary:
+        dictionary[value]=index
+
+result = []
+
+for value in nums:
+    # to display the index of the value from dictionary
+    result.append(dictionary[value])
+print(result)
 
 """smaller=[]
 for i in range(len(nums)):

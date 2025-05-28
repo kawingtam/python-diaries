@@ -6,10 +6,15 @@ Output: [0,1]
 
 """
 
-nums = input("Enter numbers separated by commas: ")
-nums = list(map(int, nums.split(",")))
+"""nums = input("Enter numbers separated by commas: ")
+nums = list(map(int, nums.split(",")))"""
 
-target = int(input("Enter the target sum: "))
+nums = [2,7,11,15]
+
+"""target = int(input("Enter the target sum: "))
+"""
+
+target = 17
 
 #using i as the index, start at index 0 
 for i in range (len(nums)):

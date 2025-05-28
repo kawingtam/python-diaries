@@ -13,8 +13,6 @@ move vertically by one unit,
 move horizontally by one unit, or
 move diagonally sqrt(2) units 
 
-move one unit vertically then one unit horizontally in 1 second
-
 Input: points = [[1,1],[3,4],[-1,0]]
 Output: 7
 Explanation: One optimal path is 
@@ -37,8 +35,13 @@ print(points)
 
 result = 0
 for i in range(0,len(points)-1):
+
     x1,y1=points[i]
     x2,y2=points[i+1]
+
+    #by finding the maximum of either x or y coordinates difference
+    #it will give the shortest distance to move to the next point
+    #allowed to move vertically, horizontally and diagonally by 1 unit
     result += max(abs(x2-x1),abs(y2-y1))
 
 print(result)

@@ -6,9 +6,11 @@ Output: true
 
 """
 
-a = input("Enter numbers separated by commas: ")
+"""a = input("Enter numbers separated by commas: ")
 a = a.split(",")
-print(a)
+print(a)"""
+
+a = [1,2,3,1]
 dup = False
 
 seen = set()

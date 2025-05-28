@@ -6,8 +6,10 @@ Output: [5,6]
 
 """
 
-a = input("Enter numbers separated by commas: ")
-a = list(map(int, a.split(",")))
+"""a = input("Enter numbers separated by commas: ")
+a = list(map(int, a.split(",")))"""
+
+a = [4,3,2,7,8,2,3,1]
 
 missing_num = []
 

@@ -6,10 +6,12 @@ Output: 2
 
 """
 
-a = input("Enter numbers separated by commas: ")
+"""a = input("Enter numbers separated by commas: ")
 
 # Convert input to a list of integers
-a = list(map(int, a.split(",")))
+a = list(map(int, a.split(",")))"""
+
+a = [3,4,0,1]
 
 a_len = len(a)
 
